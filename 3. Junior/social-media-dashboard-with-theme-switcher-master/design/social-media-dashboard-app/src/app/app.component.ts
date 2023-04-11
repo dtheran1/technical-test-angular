@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'social-media-dashboard-app';
+
+  cards = [
+    {
+      title: 'Twitter',
+      url: 'https://twitter.com/',
+      icon: 'twitter',
+      description: 'Twitter is a social networking service that enables users to share information and interact with one another.'
+    }
+  ]
 }
