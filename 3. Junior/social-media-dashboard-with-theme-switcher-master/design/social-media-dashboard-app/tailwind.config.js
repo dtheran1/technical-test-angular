@@ -20,6 +20,8 @@ module.exports = {
         hoverCard: "hsl(228, 30%, 30%)",
         topPatterLigth: "hsl(225, 100%, 98%)",
         themeLigth: "hsl(0, 0%, 100%)",
+        switchDarkTo: "hsl(210, 78%, 56%)",
+        switchDarkFrom: "hsl(146, 68%, 55%)",
       },
     },
   },
