@@ -23,6 +23,9 @@ module.exports = {
         switchDarkTo: "hsl(210, 78%, 56%)",
         switchDarkFrom: "hsl(146, 68%, 55%)",
       },
+      screens: {
+        xs: "375px"
+      },
     },
   },
   plugins: [],

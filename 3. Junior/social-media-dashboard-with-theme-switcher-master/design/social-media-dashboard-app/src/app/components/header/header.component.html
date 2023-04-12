@@ -1,17 +1,19 @@
-<div class="flex justify-between z-50 relative">
-  <div class="dark:text-textWhite">
+<div class="flex xs:flex-col md:flex-row justify-between z-50 relative">
+  <div class="text-gray-900 dark:text-textWhite">
     <h1 class="text-3xl font-bold">Social Media Dashboard</h1>
     <p class="text-gray-500 font-bold">Total Followers: 23,004</p>
   </div>
-  <div>
-    <label class="relative inline-flex items-center mb-4 cursor-pointer gap-2">
-      <span class="ml-3 text-sm text-gray-900 font-bold dark:text-gray-300"
-        >Dark Mode</span
-      >
-      <input type="checkbox" value="" class="sr-only peer" />
-      <div
-        class="w-11 h-6 py-2 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:before:translate-x-full peer-checked:before:border-white before:content-[''] before:absolute before:top-0.5 before:bg-white before:border-gray-300 before:border before:rounded-full before:h-5 before:w-5 before:transition-all dark:border-gray-600 peer-checked:bg-gradient-to-r from-switchDarkTo to-switchDarkFrom"
-      ></div>
-    </label>
+  <div class="xs:border-t xs:border-slate-500 xs:mt-4 md:mt-0 md:border-none xs:pt-3 xs:flex justify-between items-center gap-3 ">
+    <div class="md:-mt-2 xs:-top-1 text-sm text-gray-500 font-bold dark:text-gray-300">
+      <span>Dark Mode</span>
+    </div>
+    <div class="xs:mt-4 md:mt-2">
+      <label class="relative inline-flex items-center mb-4 cursor-pointer gap-2">
+        <input type="checkbox" value="" class="sr-only peer" />
+        <div
+          class="w-11 h-6 py-2 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:before:translate-x-full peer-checked:before:border-white before:content-[''] before:absolute before:top-0.5 before:bg-white before:border-gray-300 before:border before:rounded-full before:h-5 before:w-5 before:transition-all dark:border-gray-600 peer-checked:bg-gradient-to-r from-switchDarkTo to-switchDarkFrom"
+        ></div>
+      </label>
+    </div>
   </div>
 </div>
