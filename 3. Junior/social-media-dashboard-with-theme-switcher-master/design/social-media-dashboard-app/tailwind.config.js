@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     "./src/**/*.{html,ts}",
   ],
@@ -11,17 +12,14 @@ module.exports = {
         youtube: "hsl(348, 97%, 39%)",
         instagramTo: "hsl(37, 97%, 70%)",
         instagramFrom: "hsl(329, 70%, 58%)",
-        bluePrimary: "#2b4ec3",
-        blueShadow: "#4ea5ff",
-        blueComplementary: "#698df4",
-        purpleComplementary: "#a14deb",
-        blueTooltips: "#4976F8",
-        colorBorders: "#C1C9D8",
-        colorShadow: "#F1F3F8",
-        colorShadowPrincipal: "#fcaec0",
-        orange: "#F6F6E4",
-        textRed: "#C56C3D",
-        colorBackgroundShadow: "#c4d2fb"
+        veryDarkBlue: "hsl(230, 17%, 14%)",
+        darkCard: "hsl(228, 28%, 20%)",
+        textDark: "hsl(228, 34%, 66%)",
+        textWhite: "hsl(0, 0%, 100%)",
+        topPatterDark: "hsl(232, 19%, 15%)",
+        hoverCard: "hsl(228, 30%, 30%)",
+        topPatterLigth: "hsl(225, 100%, 98%)",
+        themeLigth: "hsl(0, 0%, 100%)",
       },
     },
   },
