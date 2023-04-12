@@ -1,1 +1,35 @@
-<p>overview works!</p>
+<div class="mt-12 mb-5">
+  <h5 class="text-3xl font-bold text-gray-500 dark:text-textWhite">
+    Overview - Today
+  </h5>
+</div>
+
+<div class="grid sm:grid-cols-1 md:grid-cols-4 w-full gap-6">
+  <a
+    *ngFor="let card of overviews"
+    href="#"
+    class="h-32 pb-4 bg-slate-100 dark:bg-darkCard rounded-lg shadow hover:scale-105 hover:bg-gray-300 hover:dark:bg-hoverCard p-6"
+  >
+    <div
+      class="flex justify-between items-center h-1/2 dark:text-textDark font-bold text-md"
+    >
+      <span>{{ card.title }}</span>
+      <img [src]="card.red" alt="icon-red" />
+    </div>
+    <div
+      class="flex justify-between items-center h-1/2 dark:text-textWhite font-bold text-3xl"
+    >
+      <span> {{ card.views }} </span>
+      <div
+        class="flex text-sm items-center gap-1"
+        [ngStyle]="{
+          color:
+            card.arrow.includes('up') ? 'hsl(163, 72%, 41%)' : '#c34863'
+        }"
+      >
+        <img [src]="card.arrow" alt="icon-arrow" class="h-1" />
+        <span> {{ card.percentageOfViews }}% </span>
+      </div>
+    </div>
+  </a>
+</div>

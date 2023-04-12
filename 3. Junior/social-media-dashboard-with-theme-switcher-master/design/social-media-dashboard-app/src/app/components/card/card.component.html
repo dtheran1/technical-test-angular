@@ -1,9 +1,9 @@
-<div class="flex sm:flex-col md:flex-row justify-between sm:grid-cols-1 mx-auto w-full gap-6 mt-10 z-50 relative">
+<div class="grid sm:grid-cols-1 md:grid-cols-4 mx-auto w-full gap-6 mt-10 z-50 relative">
   <a
     *ngFor="let card of cards"
     [ngSwitch]="card.red"
     href="#"
-    class="flex flex-col items-center w-80 pb-4 bg-slate-100 dark:bg-darkCard rounded-lg border-t-4 shadow hover:scale-105 hover:bg-gray-300 hover:dark:bg-hoverCard"
+    class="flex flex-col items-center pb-4 bg-slate-100 dark:bg-darkCard rounded-lg border-t-4 shadow hover:scale-105 hover:bg-gray-300 hover:dark:bg-hoverCard"
   >
     <div
       class="border-t-4 w-full border-facebook pt-6 -mt-1 rounded-md"
@@ -35,7 +35,7 @@
         class="font-bold text-xs flex"
         [ngStyle]="{
           color:
-            card.red === 'youtube' ? 'hsl(348, 97%, 39%)' : 'hsl(163, 72%, 41%)'
+            card.red === 'youtube' ? '#c34863' : 'hsl(163, 72%, 41%)'
         }"
       >
         {{ card.today }} Today</span
