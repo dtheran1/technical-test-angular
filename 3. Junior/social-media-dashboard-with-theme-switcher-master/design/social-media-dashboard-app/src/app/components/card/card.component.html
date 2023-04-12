@@ -1,45 +1,55 @@
-<div class="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mx-auto w-full gap-6 mt-10 z-50 relative">
-  <a
-    *ngFor="let card of cards"
+<div
+  class="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mx-auto w-full gap-6 mt-10 z-50 relative"
+>
+  <div
+    *ngFor="let card of users"
     [ngSwitch]="card.red"
-    href="#"
-    class="flex flex-col items-center pb-4 bg-slate-100 dark:bg-darkCard rounded-lg border-t-4 shadow hover:scale-105 hover:bg-gray-300 hover:dark:bg-hoverCard"
+    class="rounded-t-lg rounded-b-xl hover:scale-105"
+    [ngStyle]="{
+      background:
+        card.red === 'facebook'
+          ? 'hsl(208, 92%, 53%)'
+          : card.red === 'twitter'
+          ? 'hsl(203, 89%, 53%)'
+          : card.red === 'youtube'
+          ? 'hsl(348, 97%, 39%)'
+          : card.red === 'instagram'
+          ? 'linear-gradient(90deg, rgba(252,197,106,1) 0%, rgba(222,73,149,1) 100%)'
+          : ''
+    }"
   >
-    <div
-      class="border-t-4 w-full border-facebook pt-6 -mt-1 rounded-md"
-      *ngSwitchCase="'facebook'"
-    ></div>
-    <div
-      class="border-t-4 w-full border-twitter pt-6 -mt-1 rounded-md"
-      *ngSwitchCase="'twitter'"
-    ></div>
-    <div
-      class="w-full pt-6 rounded-lg -mt-1 border-t-4 border-instagramFrom"
-      *ngSwitchCase="'instagram'"
-    ></div>
-    <div
-      class="border-t-4 w-full border-youtube pt-6 -mt-1 rounded-md"
-      *ngSwitchCase="'youtube'"
-    ></div>
-    <div class="flex gap-2 mb-4">
-      <img [src]="card.icon" alt="icon-red-social" />
-      <p class="text-sm font-bold text-gray-500 dark:text-textDark">{{ card.user }}</p>
-    </div>
-    <h5 class="text-6xl font-bold tracking-tight text-gray-900 dark:text-textWhite">{{ card.followers }}</h5>
-    <p class="font-normal text-md text-gray-500 dark:text-textDark tracking-widest mb-4">
-      FOLLOWERS
-    </p>
-    <div class="flex items-center gap-1">
-      <img [src]="card.arrow" class="h-1" alt="icon-arrow" />
-      <span
-        class="font-bold text-xs flex"
-        [ngStyle]="{
-          color:
-            card.red === 'youtube' ? '#c34863' : 'hsl(163, 72%, 41%)'
-        }"
+    <a
+      href="#"
+      class="flex mt-1 flex-col pt-7 items-center pb-4 border-t-0 border-slate-100 dark:border-darkCard bg-slate-100 dark:bg-darkCard rounded-lg shadow hover:bg-gray-300 hover:dark:bg-hoverCard"
+    >
+      <div class="flex gap-2 mb-4">
+        <img [src]="card.icon" alt="icon-red-social" />
+        <p class="text-sm font-bold text-gray-500 dark:text-textDark">
+          {{ card.userName }}
+        </p>
+      </div>
+      <h5
+        class="text-6xl font-bold tracking-tight text-gray-900 dark:text-textWhite"
       >
-        {{ card.today }} Today</span
+        {{ card.followers }}
+      </h5>
+      <p
+        class="font-normal text-md text-gray-500 dark:text-textDark tracking-widest mb-4"
+        style="letter-spacing: 5px"
       >
-    </div>
-  </a>
+        {{ card.description | uppercase }}
+      </p>
+      <div class="flex items-center gap-1">
+        <img [src]="card.arrow" class="h-1" alt="icon-arrow" />
+        <span
+          class="font-bold text-xs flex"
+          [ngStyle]="{
+            color: card.red === 'youtube' ? '#c34863' : 'hsl(163, 72%, 41%)'
+          }"
+        >
+          {{ card.today }} Today</span
+        >
+      </div>
+    </a>
+  </div>
 </div>
