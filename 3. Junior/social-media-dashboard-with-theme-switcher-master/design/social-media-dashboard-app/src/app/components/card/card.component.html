@@ -1,0 +1,45 @@
+<div class="grid sm:grid-cols-1 md:grid-cols-4 gap-6 mt-10">
+  <a
+    *ngFor="let card of cards"
+    [ngSwitch]="card.red"
+    href="#"
+    class="flex flex-col items-center w-52 pb-4 bg-gray-100 rounded-lg border-t-4 shadow hover:scale-105 hover:bg-gray-300"
+  >
+    <div
+      class="border-t-4 w-full border-facebook pt-6 -mt-1 rounded-md"
+      *ngSwitchCase="'facebook'"
+    ></div>
+    <div
+      class="border-t-4 w-full border-twitter pt-6 -mt-1 rounded-md"
+      *ngSwitchCase="'twitter'"
+    ></div>
+    <div
+      class="w-full pt-6 rounded-lg -mt-1 border-t-4 border-instagramFrom"
+      *ngSwitchCase="'instagram'"
+    ></div>
+    <div
+      class="border-t-4 w-full border-youtube pt-6 -mt-1 rounded-md"
+      *ngSwitchCase="'youtube'"
+    ></div>
+    <div class="flex gap-2 mb-4">
+      <img [src]="card.icon" alt="icon-red-social" />
+      <p class="text-sm">{{ card.user }}</p>
+    </div>
+    <h5 class="text-5xl font-bold tracking-tight">{{ card.followers }}</h5>
+    <p class="font-normal text-sm text-gray-500 tracking-widest mb-4">
+      FOLLOWERS
+    </p>
+    <div class="flex items-center gap-1">
+      <img [src]="card.arrow" class="h-1" alt="icon-arrow" />
+      <span
+        class="font-bold text-xs flex"
+        [ngStyle]="{
+          color:
+            card.red === 'youtube' ? 'hsl(348, 97%, 39%)' : 'hsl(163, 72%, 41%)'
+        }"
+      >
+        {{ card.today }} Today</span
+      >
+    </div>
+  </a>
+</div>

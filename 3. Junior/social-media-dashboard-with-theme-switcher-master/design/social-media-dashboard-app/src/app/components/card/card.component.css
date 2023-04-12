@@ -1,0 +1,26 @@
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.instagram{
+  background: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+
+// tablets
+@media screen and (min-width: 10em) and (max-width: 375px){
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// web
+@media screen and (min-width: 1440px){
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+  }
+}

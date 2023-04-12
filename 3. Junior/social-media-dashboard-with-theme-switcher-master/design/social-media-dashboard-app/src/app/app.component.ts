@@ -10,10 +10,28 @@ export class AppComponent {
 
   cards = [
     {
-      title: 'Twitter',
-      url: 'https://twitter.com/',
+      user: '@nathanf',
+      followers: '1987',
+      icon: 'facebook',
+      today: '12'
+    },
+    {
+      user: '@nathanf',
+      followers: '1044',
       icon: 'twitter',
-      description: 'Twitter is a social networking service that enables users to share information and interact with one another.'
+      today: '99'
+    },
+    {
+      user: '@realnathanf',
+      followers: '11k',
+      icon: 'instagram',
+      today: '1099'
+    },
+    {
+      user: 'Nathan F.',
+      followers: '8239',
+      icon: 'youtube',
+      today: '144'
     }
   ]
 }
