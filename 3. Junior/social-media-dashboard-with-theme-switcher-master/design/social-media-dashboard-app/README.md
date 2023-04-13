@@ -1,5 +1,12 @@
 # SocialMediaDashboardApp
 
+![image](https://user-images.githubusercontent.com/83596975/231641892-05374bdb-8bd4-4d64-9b37-f507e54e13c5.png)
+
+![image](https://user-images.githubusercontent.com/83596975/231641912-5f6f3b72-a2e6-4069-97ec-bd63389c5754.png)
+
+![image](https://user-images.githubusercontent.com/83596975/231641955-876ca98f-9c7b-4d6b-8fca-3a1f55977267.png)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
 
 ## Development server
