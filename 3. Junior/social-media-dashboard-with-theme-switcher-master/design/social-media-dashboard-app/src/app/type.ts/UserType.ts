@@ -7,3 +7,11 @@ export interface User {
   arrow: string,
   today: string
 }
+
+export interface Overview {
+  title: string,
+  views: string,
+  percentageOfViews: string,
+  red: string,
+  arrow: string,
+}
